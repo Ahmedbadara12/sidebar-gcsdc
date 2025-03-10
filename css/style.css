@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Tajawal", sans-serif;
+    direction: rtl;
+    background-color: #f8f9fa;
+  }
+  
+  .sidebar {
+    height: 100vh;
+    width: 280px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: linear-gradient(180deg, #343a40, #2c3e50);
+    padding-top: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease; /* Animate width */
+  }
+  
+  .sidebar.collapsed {
+    width: 60px; /* Collapse sidebar width */
+  }
+  
+  .sidebar .sidebar-content {
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Animate opacity and visibility */
+  }
+  
+  .sidebar.collapsed .sidebar-content {
+    opacity: 0; /* Hide content */
+    visibility: hidden; /* Hide content */
+  }
+  
+  .sidebar .logo {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 15px;  
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+  }
+  
+  .sidebar .nav-link {
+    color: #fff;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-5px);
+  }
+  
+  .sidebar .nav-link.active {
+    background: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar .nav-link i {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  
+  .content {
+    margin-right: 280px;
+    padding: 30px;
+    background-color: #fff;
+    min-height: 100vh;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: margin-right 0.3s ease;
+  }
+  
+  .content.collapsed {
+    margin-right: 60px; /* Adjust content margin when sidebar is collapsed */
+  }
+  
+  .toggle-btn {
+    margin: 10px; /* Position the button inside the sidebar */
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s ease;
+  }
+  
+  .toggle-btn:hover {
+    background: #0056b3;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  /* Custom Font for Arabic */
+  @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap");
