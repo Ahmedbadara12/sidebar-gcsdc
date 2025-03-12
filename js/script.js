@@ -2,24 +2,34 @@ function toggleSidebar() {
   const sidebarContent = document.querySelector('.sidebar-content');
   sidebarContent.classList.toggle('d-none');
 }
- document.addEventListener("DOMContentLoaded", function () {
-  // Modal and total inquiries logic
+document.addEventListener("DOMContentLoaded", function () {
+  // Modal logic
   const modal = document.getElementById("complaintModal");
   if (modal) {
     modal.addEventListener("show.bs.modal", function (event) {
       const button = event.relatedTarget;
       const row = button.closest("tr");
-      const cells = row.querySelectorAll("td");
+      if (row) {
+        const cells = row.querySelectorAll("td");
 
-      document.getElementById("complaintName").value = cells[0].textContent;
-      document.getElementById("complaintEmail").value = cells[5].textContent;
-      document.getElementById("complaintPhone").value = cells[3].textContent;
-      document.getElementById("complaintDetails").value = cells[2].textContent;
+        const complaintName = document.getElementById("complaintName");
+        const complaintEmail = document.getElementById("complaintEmail");
+        const complaintPhone = document.getElementById("complaintPhone");
+        const complaintDetails = document.getElementById("complaintDetails");
+
+        if (complaintName) complaintName.value = cells[0].textContent;
+        if (complaintEmail) complaintEmail.value = cells[5].textContent;
+        if (complaintPhone) complaintPhone.value = cells[3].textContent;
+        if (complaintDetails) complaintDetails.value = cells[2].textContent;
+      }
     });
   }
 
   // Calculate total inquiries
   const tableRows = document.querySelectorAll("#example tbody tr");
-  const totalInquiries = tableRows.length;
-  document.getElementById("totalInquiries").textContent = totalInquiries;
+  const totalInquiriesElement = document.getElementById("totalInquiries");
+  if (tableRows.length > 0 && totalInquiriesElement) {
+    const totalInquiries = tableRows.length;
+    totalInquiriesElement.textContent = totalInquiries;
+  }
 });
