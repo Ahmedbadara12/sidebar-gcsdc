@@ -1,11 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap");
-
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+  /* font-family: 'Amiri', serif; */
+  
 body {
   margin: 0;
   padding: 0;
-  font-family: "Tajawal";
+  font-family:'Amiri', serif;
   direction: rtl;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa;  
+ 
+  font-weight: 400;
 }
 
 /* Sidebar Styles */
@@ -18,7 +21,7 @@ body {
   background: linear-gradient(180deg, #3588db, #075cb1);
   padding-top: 20px;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: width 0.3s ease;
+  transition: width 0.3s ease; 
 }
 
 .sidebar.collapsed {
@@ -29,9 +32,10 @@ body {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.sidebar.collapsed .sidebar-content {
-  opacity: 0;
-  visibility: hidden;
+.sidebar-content {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Smooth slide-in/slide-out */
 }
 
 .sidebar .logo {
@@ -85,7 +89,7 @@ body {
 /* Content Styles */
 .content {
   margin-right: 280px;
-  padding: 30px;
+
   background-color: #fff;
   min-height: 100vh;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -98,9 +102,7 @@ body {
 
 /* Toggle Button Styles */
 .toggle-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
+ width: 100%;
   background: #007bff;
   color: #fff;
   border: none;
@@ -124,7 +126,7 @@ body {
  
 
   .content {
-    margin-right: 60px;
+    margin-right: 250px;
   }
 
   .toggle-btn {
@@ -143,7 +145,8 @@ body {
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    align-content: center;
+    align-content: center; 
+    padding: 0;
   } 
   .sidebar .logo img { 
     width: 50%;
@@ -159,9 +162,7 @@ body {
     padding: 15px;
   }
 
-  .toggle-btn {
-    display: none;
-  }
+  
 }
 @media (max-width: 767.98px) {
   #example thead {
