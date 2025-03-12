@@ -23,7 +23,7 @@
     
 
       <!-- Sidebar Content -->
-      <div class="sidebar-content">
+      <div class="sidebar-content d-none d-md-block">
         <div class="logo d-flex flex-column justify-content-between align-items-center">
           <h5 class="mt-3 fs-4">خدمة العملاء</h5>
           <img class="" src="./images/Logo Company.png" alt="" />
@@ -34,7 +34,18 @@
           <a class="nav-link" href="#"> رد إستفسار </a>
           <a class="nav-link" href="#"> رد أقتراح </a>
           <a class="nav-link" href="#"> الحجز الإلكترونى </a>
-        </nav>
+        </nav> 
+        <footer>
+          <div class="social-icons">
+              <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="footer-text px-3">
+              كل الحقوق محفوظة لشركة الصرف الصحي للقاهرة الكبرى &copy; 
+          </div>
+      </footer>
       </div> 
       <button class="toggle-btn d-lg-none w-100" onclick="toggleSidebar()">
         <i class="fas fa-bars"></i>
@@ -98,10 +109,7 @@
     <!-- Bootstrap JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      function toggleSidebar() {
-        const sidebarContent = document.querySelector('.sidebar-content');
-        sidebarContent.classList.toggle('d-none');
-      }
+    
     </script>
   </body>
 </html>

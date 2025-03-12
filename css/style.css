@@ -49,7 +49,7 @@ body {
   margin: 10px;
 } 
 .logo img{ 
-  width: 100%;
+  width: 70%;
 }
 
 .logo h5 {
@@ -203,4 +203,29 @@ body {
   border-radius: 0.25rem;
   text-align: center;
   font-weight: bold;
+}
+footer {
+  
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #55acee; /* Change color on hover */
+}
+
+.footer-text {
+  margin-top: 10px;
+  font-size: 14px;  
+  font-weight: 600;  
+  text-shadow: 6px 3px 9px rgba(0, 0, 0, 0.39);
+
 }
