@@ -1,27 +1,36 @@
 function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const content = document.getElementById("content");
-  
-    sidebar.classList.toggle("collapsed");
-    content.classList.toggle("collapsed");
-  } 
-    // JavaScript to populate modal with data and calculate total inquiries
-    document.addEventListener('DOMContentLoaded', function () {
-      const modal = document.getElementById('complaintModal');
-      modal.addEventListener('show.bs.modal', function (event) {
-          const button = event.relatedTarget; // Button that triggered the modal
-          const row = button.closest('tr'); // Get the closest row
-          const cells = row.querySelectorAll('td'); // Get all cells in the row
+  const sidebar = document.getElementById("sidebar");
+  const content = document.getElementById("content");
 
-          // Populate modal inputs
-          document.getElementById('complaintName').value = cells[0].textContent;
-          document.getElementById('complaintEmail').value = cells[5].textContent;
-          document.getElementById('complaintPhone').value = cells[3].textContent;
-          document.getElementById('complaintDetails').value = cells[2].textContent;
-      });
+  // Toggle the 'collapsed' class on both sidebar and content
+  sidebar.classList.toggle("collapsed");
+  content.classList.toggle("collapsed");
+}
 
-      // Calculate and display total inquiries
-      const tableRows = document.querySelectorAll('#example tbody tr');
-      const totalInquiries = tableRows.length;
-      document.getElementById('totalInquiries').textContent = totalInquiries;
-  });
+// Add event listener to the toggle button
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.querySelector(".toggle-btn");
+  if (toggleButton) {
+    toggleButton.addEventListener("click", toggleSidebar);
+  }
+
+  // Modal and total inquiries logic
+  const modal = document.getElementById("complaintModal");
+  if (modal) {
+    modal.addEventListener("show.bs.modal", function (event) {
+      const button = event.relatedTarget;
+      const row = button.closest("tr");
+      const cells = row.querySelectorAll("td");
+
+      document.getElementById("complaintName").value = cells[0].textContent;
+      document.getElementById("complaintEmail").value = cells[5].textContent;
+      document.getElementById("complaintPhone").value = cells[3].textContent;
+      document.getElementById("complaintDetails").value = cells[2].textContent;
+    });
+  }
+
+  // Calculate total inquiries
+  const tableRows = document.querySelectorAll("#example tbody tr");
+  const totalInquiries = tableRows.length;
+  document.getElementById("totalInquiries").textContent = totalInquiries;
+});

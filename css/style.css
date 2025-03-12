@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap");
 
- body {
+body {
   margin: 0;
   padding: 0;
   font-family: "Tajawal";
@@ -8,6 +8,7 @@
   background-color: #f8f9fa;
 }
 
+/* Sidebar Styles */
 .sidebar {
   height: 100vh;
   width: 280px;
@@ -17,20 +18,20 @@
   background: linear-gradient(180deg, #3588db, #075cb1);
   padding-top: 20px;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: width 0.3s ease; /* Animate width */
+  transition: width 0.3s ease;
 }
 
 .sidebar.collapsed {
-  width: 60px; /* Collapse sidebar width */
+  width: 60px;
 }
 
 .sidebar .sidebar-content {
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Animate opacity and visibility */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .sidebar.collapsed .sidebar-content {
-  opacity: 0; /* Hide content */
-  visibility: hidden; /* Hide content */
+  opacity: 0;
+  visibility: hidden;
 }
 
 .sidebar .logo {
@@ -39,14 +40,17 @@
   margin-bottom: 30px;
   font-size: 26px;
   font-weight: bold;
-
   background: rgba(255, 255, 255, 0.137);
   border-radius: 10px;
   margin: 10px;
+} 
+.logo img{ 
+  width: 100%;
 }
+
 .logo h5 {
   text-shadow: 6px 3px 9px rgba(0, 0, 0, 0.39);
-  font-size: 16px; 
+  font-size: 16px;
   width: 100%;
 }
 
@@ -62,10 +66,9 @@
 }
 
 .sidebar .nav-link:hover {
-  background: rgba(255, 255, 255, 0.1); 
-  font-weight: 600; 
-  font-size: 18px; 
- 
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  font-size: 18px;
   transform: translateX(-5px);
 }
 
@@ -79,6 +82,7 @@
   font-size: 18px;
 }
 
+/* Content Styles */
 .content {
   margin-right: 280px;
   padding: 30px;
@@ -89,11 +93,14 @@
 }
 
 .content.collapsed {
-  margin-right: 60px; /* Adjust content margin when sidebar is collapsed */
+  margin-right: 60px;
 }
 
+/* Toggle Button Styles */
 .toggle-btn {
-  margin: 10px; /* Position the button inside the sidebar */
+  position: fixed;
+  top: 10px;
+  right: 10px;
   background: #007bff;
   color: #fff;
   border: none;
@@ -108,18 +115,57 @@
   background: #0056b3;
 }
 
-h1 {
-  color: #2c3e50;
-  font-weight: bold;
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar .sidebar-content {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .content {
+    margin-right: 60px;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
 }
 
-p {
-  color: #555;
-  line-height: 1.8;
-}
+@media (max-width: 767.98px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    transform: translateX(0);
+    box-shadow: none; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    align-content: center;
+  } 
+  .sidebar .logo img { 
+    width: 50%;
+  }
 
-/* Custom Font for Arabic */
-/* Custom CSS for vertical table on small screens */
+  .sidebar .sidebar-content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .content {
+    margin-right: 0;
+    padding: 15px;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+}
 @media (max-width: 767.98px) {
   #example thead {
     display: none;
