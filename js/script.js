@@ -1,18 +1,8 @@
-function toggleSidebar() {
-  const sidebar = document.getElementById("sidebar");
-  const content = document.getElementById("content");
 
-  // Toggle the 'collapsed' class on both sidebar and content
-  sidebar.classList.toggle("collapsed");
-  content.classList.toggle("collapsed");
-}
 
 // Add event listener to the toggle button
 document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.querySelector(".toggle-btn");
-  if (toggleButton) {
-    toggleButton.addEventListener("click", toggleSidebar);
-  }
+ 
 
   // Modal and total inquiries logic
   const modal = document.getElementById("complaintModal");
