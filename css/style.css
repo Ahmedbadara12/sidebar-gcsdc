@@ -69,8 +69,8 @@ body {
 
 .sidebar .nav-link:hover {
   background: rgba(255, 255, 255, 0.1);
-  font-weight: 600;
-  font-size: 18px;
+ 
+    
   transform: translateX(-5px);
 }
 
