@@ -16,51 +16,50 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="container d-flex justify-content-center align-items-center flex-column py-5">
-      <form class="row g-3">
-        <div class="col-auto">
-          <label for="buildingCode" class="visually-hidden">كود المنشأة</label>
-          <input
-            type="text"
-            class="form-control"
-            id="buildingCode"
-            value="كود المنشأة"
-          />
-        </div>
-
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3">تأكيد</button>
-        </div>
-      </form> 
-      <div class="py-5"> 
+    <div class="container  d-flex justify-content-center align-items-center  flex-column ">
+      
+      <div class="py-5 w-100"> 
         <div class="container">
-            <div class="form-container  p-5 rounded-4 shadow-lg">
-                <h1>نموذج المنشأة الصناعية</h1>
+            <div class="form-container p-4  rounded-4 shadow-lg"> 
+              <form class="row d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <div class="col-auto">
+                  <label for="Code" class="visually-hidden">رقم الطلب</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Code" 
+                    placeholder="رقم الطلب"
+            
+                  />
+                </div>
+        
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-primary my-1">تأكيد</button>
+                </div>
+              </form> 
+                <h1 class="my-3 text-primary fw-bold fs-1">المستحقات المالية</h1>
                 <form id="industrialForm">
                     <div class="mb-3">
-                        <label for="establishmentCode" class="form-label">كود المنشأة الصناعية:</label>
-                        <input type="text"  class="form-control" id="establishmentCode" name="establishmentCode" disabled>
+                        <label for="Code" class="form-label">رقم الطلب</label>
+                        <input type="text"  class="form-control" id="Code" name="Code" disabled>
                     </div>
                     <div class="mb-3">
-                        <label for="establishmentName" class="form-label">اسم المنشأة الصناعية:</label>
-                        <input type="text" class="form-control" id="establishmentName" name="establishmentName" disabled>
+                        <label for="Name" class="form-label">اسم المالك</label>
+                        <input type="text" class="form-control" id="Name" name="Name" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="address" class="form-label">العنوان:</label>
                         <input type="text" class="form-control" id="address" name="address" disabled>
                     </div>
                     <div class="mb-3">
-                        <label for="amountDue" class="form-label">المبلغ المستحق على المنشأة:</label>
-                        <input type="number" class="form-control" id="amountDue" name="amountDue" disabled>
+                        <label for="service" class="form-label">نوع الخدمة</label>
+                        <input type="number" class="form-control" id="service" name="service" disabled>
                     </div>
                     <div class="mb-3">
-                        <label for="amountPaid" class="form-label">المبلغ المسدد:</label>
+                        <label for="amountPaid" class="form-label">المبلغ المستحق</label>
                         <input type="number" class="form-control" id="amountPaid" name="amountPaid" disabled>
                     </div>
-                    <div class="mb-3">
-                        <label for="lastPaymentDate" class="form-label">تاريخ اخر سداد للمنشأة:</label>
-                        <input type="date" class="form-control" id="lastPaymentDate" name="lastPaymentDate" disabled>
-                    </div>
+                  
                    
                 </form>
                 <div id="response" class="response-container mt-4"></div>
