@@ -14,11 +14,11 @@ body {
 .sidebar {
   height: 100vh;
   width: 280px;
-  position: fixed;
+  position: fixed; 
+  z-index: 10000;
   top: 0;
   right: 0;
   background: linear-gradient(180deg, #3588db, #075cb1);
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease; 
 }
 
@@ -70,7 +70,7 @@ body {
 .sidebar .nav-link:hover {
   background: rgba(255, 255, 255, 0.1);
  
-    
+
   transform: translateX(-5px);
 }
 
@@ -89,7 +89,7 @@ body {
   margin-right: 280px;
 
   background-color: #fff;
-  min-height: 100vh;
+
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   transition: margin-right 0.3s ease;
 }
@@ -202,8 +202,9 @@ body {
   text-align: center;
   font-weight: bold;
 }
-footer {
-  
+footer { 
+  bottom: -40%;
+  background-color: #0C61B6;
   color: white;
   padding: 20px 0;
   text-align: center;
