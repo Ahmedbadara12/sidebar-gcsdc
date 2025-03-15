@@ -32,4 +32,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalInquiries = tableRows.length;
     totalInquiriesElement.textContent = totalInquiries;
   }
+}); 
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default link behavior
+
+      // Remove 'active' class from all links
+      navLinks.forEach(link => link.classList.remove('active'));
+
+      // Add 'active' class to the clicked link
+      this.classList.add('active');
+
+      // You can also add logic here to load content based on the clicked link
+      const target = this.getAttribute('data-target');
+      loadContent(target);
+    });
+  });
+
+  function loadContent(target) {
+    // Implement logic to load content based on the target
+    console.log(`Loading content for: ${target}`);
+    // Example: Fetch content from server or show/hide elements
+  }
 });

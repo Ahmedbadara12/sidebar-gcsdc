@@ -59,7 +59,7 @@ body {
 .sidebar .nav-link {
   color: #fff;
   padding: 12px 20px;
-  margin: 8px 10px;
+  margin: 5px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -203,7 +203,6 @@ body {
   font-weight: bold;
 }
 footer { 
-  bottom: -40%;
   background-color: #0C61B6;
   color: white;
   padding: 20px 0;
