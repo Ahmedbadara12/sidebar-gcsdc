@@ -27,7 +27,7 @@ body {
 }
 
 .sidebar .sidebar-content {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .sidebar-content {
